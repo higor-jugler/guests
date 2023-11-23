@@ -12,9 +12,7 @@ class GuestDatabase(context: Context) : SQLiteOpenHelper(context, NAME, null, VE
         private const val VERSION = 1
     }
 
-    override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("create table ${DatabaseConstants.GUEST.TABLE_NAME} (${DatabaseConstants.GUEST.COLUMNS.ID} integer primary key autoincrement, ${DatabaseConstants.GUEST.COLUMNS.NAME} text, ${DatabaseConstants.GUEST.COLUMNS.PRESENCE} integer)")
-    }
+    override fun onCreate(db: SQLiteDatabase) { }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
