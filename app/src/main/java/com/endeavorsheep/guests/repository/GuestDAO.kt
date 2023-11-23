@@ -17,7 +17,7 @@ interface GuestDAO {
     fun update(guest: GuestModel): Int
 
     @Delete
-    fun delete(id: Int)
+    fun delete(guest: GuestModel)
 
     @Query("SELECT * FROM Guest WHERE id = :id")
     fun get(id: Int): GuestModel

@@ -13,6 +13,9 @@ import com.endeavorsheep.guests.model.GuestModel
 
 @Database(entities = [GuestModel::class], version = 1)
 abstract class GuestDatabase() : RoomDatabase() {
+
+    abstract fun guestDAO(): GuestDAO
+
     companion object {
         private lateinit var INSTANCE: GuestDatabase
         fun getDatabase(context: Context): GuestDatabase {

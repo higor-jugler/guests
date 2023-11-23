@@ -9,7 +9,7 @@ import com.endeavorsheep.guests.model.SuccessFailure
 import com.endeavorsheep.guests.repository.GuestRepository
 
 class GuestFormViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository = GuestRepository.getInstance(application)
+    private val repository = GuestRepository(application)
 
     private val guestModel = MutableLiveData<GuestModel>()
     val guest: LiveData<GuestModel> = guestModel
